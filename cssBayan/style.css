@@ -1,143 +1,140 @@
 * {
-    margin: 0;
-    padding: 0;
-    font-family: Arial Black, sans-serif;
-  }
-  
+  margin: 0;
+  padding: 0;
+  font-family: Arial Black, sans-serif;
+}
+
+h1 {
+  padding-left: 3%;
+  margin-bottom: 3%;
+}
+
+.main_content {
+  margin: 0 25%;
+  padding: 3em;
+  background: rgb(231, 217, 188);
+  align-items: center;
+  min-height: 100%;
+}
+
+.accordion li {
+  list-style: none;
+  border-top: solid thin rgb(104, 93, 93);
+  cursor: pointer;
+}
+
+img {
+  padding-left: 15%;
+  width: 70%;
+}
+
+.faq-text {
+  display: none;
+  padding-bottom: 5%;
+}
+
+.faq_title {
+  display: block;
+  padding: 3%;
+  position: relative;
+  cursor: pointer;
+  font-size: 110%;
+  color: rgb(23, 23, 143);
+}
+
+.faq_title:after {
+  content: '';
+  display: block;
+  border-left: 0.3em solid transparent;
+  border-right: 0.3em solid transparent;
+  border-bottom: 0.6em solid rgb(8, 8, 8);
+  position: absolute;
+  top: 45%;
+  right: 3%;
+}
+
+.faq-input {
+  width: 0;
+  height: 0;
+  appearance: none;
+  -webkit-appearance: none;
+  position: absolute;
+}
+
+.faq-input:checked ~ img {
+  display: block;
+  transition-duration: 3s;
+}
+
+.faq-input:checked ~ .faq_title {
+  display: block;
+  color: black;
+  transition-duration: 1s;
+}
+
+.faq-input:checked ~ .faq_title:after {
+  transform: rotate(180deg);
+  transition: 1s;
+}
+
+.faq-input:hover ~ img {
+  display: block;
+  transition-duration: 5s;
+}
+
+.faq-input:hover ~ .faq_title {
+  color: black;
+  transition-duration: 1s;
+}
+
+.faq-input:hover ~ .faq_title:after {
+  transform: rotate(180deg);
+  transition: 0.5s;
+}
+
+.footer {
+  background: rgb(238, 212, 160);
+  margin: 0 25%;
+  height: 1%;
+}
+
+li:active {
+  backdrop-filter: grayscale(50%);
+  transition: 0.5s;
+}
+
+@media (max-width: 820px) {
   h1 {
     padding-left: 3%;
     margin-bottom: 3%;
+    font-size: 150%;
   }
-  
+
+  .faq_title {
+    font-size: 90%;
+  }
+}
+
+@media (max-width: 320px) {
+  h1 {
+    padding-left: 3%;
+    margin-bottom: 3%;
+    font-size: 80%;
+  }
+
   .main_content {
-    margin: 0 25%;
-    padding: 3em;
+    margin: 0;
+    padding: 5%;
     background: rgb(231, 217, 188);
     align-items: center;
     min-height: 100%;
   }
-  
-  .accordion li {
-    list-style: none;
-    border-top: solid thin rgb(104, 93, 93);
-    cursor: pointer;
-    }
-  
-  
-  img {
-    padding-left: 15%;
-    width: 70%;
-   }
-  
-  .faq-text {
-    display: none;
-    padding-bottom: 5%;
-  }
-  
+
   .faq_title {
     display: block;
     padding: 3%;
     position: relative;
-    cursor: pointer;
-    font-size: 110%;
+    font-size: 60%;
     color: rgb(23, 23, 143);
   }
-  
-  .faq_title:after {
-    content: '';
-    display: block;
-    border-left: 0.3em solid transparent;
-    border-right: 0.3em solid transparent;
-    border-bottom: 0.6em solid rgb(8, 8, 8);
-    position: absolute;
-    top: 45%;
-    right: 1%;
-  }
-  
-  .faq-input {
-    width: 0;
-    height: 0;
-    appearance: none;
-    -webkit-appearance: none;
-    position: absolute;
-  }
-  
-  .faq-input:checked ~ .faq-text {
-    display: block;
-    transition-duration: 3s;
-   }
-  
-  .faq-input:checked ~ .faq_title {
-    display: block;
-    color: black;
-    transition-duration: 1s;
-    }
-  
-  .faq-input:checked ~ .faq_title:after {
-    transform: rotate(180deg);
-    transition: 1s;
-  }
-  
-  .faq-input:hover ~ .faq-text {
-    display: block;
-    transition-duration: 5s;
-    
-  }
-  
-  .faq-input:hover ~ .faq_title {
-    
-    color: black;
-    transition-duration: 1s;
-  }
-  
-  .faq-input:hover ~ .faq_title:after {
-    transform: rotate(180deg);
-    transition: 0.5s;
-  }
-  
-  .footer {
-    background: rgb(231, 217, 188);
-    margin: 0 25%;
-    height: 1%;
-  }
-  
-  @media (max-width: 820px) { 
-  
-    h1 {
-      padding-left: 3%;
-      margin-bottom: 3%;
-      font-size: 150%;
-      
-    }
-  
-  
-    .faq_title {
-        font-size: 90%;
-          }
-  }
-  
-  
-  @media (max-width: 320px) { 
-  
-    h1 {
-      padding-left: 3%;
-      margin-bottom: 3%;
-      font-size: 80%;
-    }
-  
-    .main_content {
-      margin: 0;
-      padding: 5%;
-      background: rgb(231, 217, 188);
-      align-items: center;
-      min-height: 100%;
-    }
-  
-    .faq_title {
-      display: block;
-      padding: 3%;
-      position: relative;
-      font-size: 60%;
-      color: rgb(23, 23, 143);
-    }
-  }
+}
